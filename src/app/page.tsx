@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { LogIn } from "lucide-react";
+import Link from "next/link";
 
 export default async function Home() {
   return (
@@ -23,9 +25,12 @@ export default async function Home() {
                 Join the AI PDF Reader community to start reading PDFs with help of AI.
               </p>
             </div>
-            <Button asChild className="mt-5">
-              <SignInButton />
-            </Button>
+            <Link href="/sign-up">
+              <Button className="mt-5">
+                Sign Up to get started
+                <LogIn className="W-5 h-5 ml-3" />
+              </Button>
+            </Link>
           </SignedOut>
         </div>
       </div>
