@@ -1,3 +1,4 @@
+import FileUpload from "@/components/FileUpload";
 import { Button } from "@/components/ui/button";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { LogIn } from "lucide-react";
@@ -21,8 +22,8 @@ export default async function Home() {
           </SignedIn>
           <SignedOut>
             <div className="flex items-center mt-4">
-              <p className="max-w-xs mt-2 text-lg text-slate-800">
-                Join the AI PDF Reader community to start reading PDFs with help of AI.
+              <p className="max-w-xl mt-2 text-lg text-slate-800">
+                Join the AI PDF Reader community to start reading PDFs with the help of AI. Experience seamless integration, enhanced reading capabilities, and personalized recommendations.
               </p>
             </div>
             <Link href="/sign-up">
@@ -32,6 +33,7 @@ export default async function Home() {
               </Button>
             </Link>
           </SignedOut>
+          <FileUpload/>
         </div>
       </div>
     </div>
